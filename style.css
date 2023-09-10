@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Montserrat:wght@700&family=Philosopher:ital@1&family=Poppins:wght@400;500;600&family=Source+Code+Pro:wght@500&family=Source+Sans+3:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #222;
+}
+.text{
+    position: relative;
+    color:white;
+    font-size: 10vmin;
+    display: flex;
+    align-items: center;
+    gap:60px;
+    flex-wrap: nowrap;
+}
+.heart {
+    animation: heartbeat 1s infinite;
+    background-color: #ff2b58;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+
+    transform: rotate(-45deg);
+
+
+
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: #ff2b58;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+
+@keyframes heartbeat
+{
+    0%
+    {
+        transform: scale( 1 )
+        rotate(-45deg);
+    }
+    20%
+    {
+        transform: scale( 1.25 )
+        rotate(-45deg);
+    }
+    40%
+    {
+        transform: scale( 1.5 )
+        rotate(-45deg);
+    }
+}
+@media (max-width: 500px) {
+    .text{
+        flex-direction: column;
+    }
+}
